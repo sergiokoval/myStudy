@@ -7,10 +7,35 @@ using System.Threading.Tasks;
 
 namespace myStudy.Console
 {
+    class SomeDelegateTestClass : ICloneable
+    {
+        public delegate void DoSmth();
+
+        public DoSmth OnDoSmth;
+
+        void Do()
+        {
+            OnDoSmth += this.Do;
+        }
+
+        public object Clone()
+        {
+            return new SomeDelegateTestClass();
+        }
+    }
+        
+
+
     class Program
     {
         static void Main(string[] args)
         {
+            SomeDelegateTestClass sc = new SomeDelegateTestClass();
+
+            SomeDelegateTestClass newd = (SomeDelegateTestClass) sc.Clone();
+
+            sc.OnDoSmth += () => { };
+
             DbContentWriter writer = new DbContentWriter();
             writer.WriteToMedia("some text2");
 
