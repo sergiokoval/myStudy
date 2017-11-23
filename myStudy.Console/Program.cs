@@ -1,4 +1,5 @@
-﻿using myStudy.ConsoleApp.LoggingLibrary;
+﻿using myStudy.Console.LoggingLibrary;
+using myStudy.ConsoleApp.LoggingLibrary;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,6 +45,10 @@ namespace myStudy.Console
             System.Console.Write(sa.SelectQuery("select * from log;"));
 
             System.Console.Read();
+
+            
+
+            LoggerFactory.CreateLogStrategy("null");            
 
         }
     }
