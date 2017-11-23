@@ -63,15 +63,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Decorator\IComponent.cs" />
+    <Compile Include="Decorator\SomeComponent.cs" />
+    <Compile Include="Decorator\Tag.cs" />
     <Compile Include="LoggingLibrary\BaseContentWriter.cs" />
     <Compile Include="LoggingLibrary\DbContentWriter.cs" />
     <Compile Include="LoggingLibrary\DbLogStrategy.cs" />
+    <Compile Include="LoggingLibrary\Extensions.cs" />
     <Compile Include="LoggingLibrary\FileContentWriter.cs" />
     <Compile Include="LoggingLibrary\FileLogStrategy.cs" />
     <Compile Include="LoggingLibrary\IContentWriter.cs" />
+    <Compile Include="LoggingLibrary\LoggerFactory.cs" />
     <Compile Include="LoggingLibrary\LogStrategy.cs" />
     <Compile Include="LoggingLibrary\NullLogStrategy.cs" />
+    <Compile Include="LoggingLibrary\ObjectFactory.cs" />
     <Compile Include="LoggingLibrary\SqlAccess.cs" />
+    <Compile Include="MultipleDb\DbAbstractFactory.cs" />
+    <Compile Include="MultipleDb\DbAdapter.cs" />
+    <Compile Include="MultipleDb\IDbAdapter.cs" />
+    <Compile Include="MultipleDb\SqlServerDbFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Singleton\Singleton.cs" />

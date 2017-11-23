@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using myStudy.Console.LoggingLibrary;
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,8 +17,19 @@ namespace myStudy.Console.Tests
             var i1 = Singleton.Instance.Config;
             var i2 = Singleton.Instance.Config;            
 
-            Assert.AreEqual(i1,i2);
-            
+            Assert.AreEqual(i1,i2);            
+        }
+
+        [Test]
+        public void TestLogStrategy()
+        {
+            var logger = LoggerFactory.CreateLogStrategy("NULL");
+            Assert.NotNull(logger);
+            Assert.IsInstanceOf(typeof(NullLogStrategy), logger);
+
+            logger = LoggerFactory.CreateLogStrategy("FILE");
+            Assert.NotNull(logger);
+            Assert.IsInstanceOf(typeof(FileLogStrategy), logger);
         }
     }
 }
