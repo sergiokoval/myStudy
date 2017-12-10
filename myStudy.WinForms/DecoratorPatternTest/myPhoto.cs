@@ -17,6 +17,8 @@ namespace myStudy.WinForms.DecoratorPatternTest
             _image = new Bitmap("c:\\WP_20150124_017.jpg");
             ((Bitmap)_image).SetResolution(1000, 1000);
             this.Paint += Draw;
+            
+            
         }
 
         public virtual void Draw(object sender, PaintEventArgs e)

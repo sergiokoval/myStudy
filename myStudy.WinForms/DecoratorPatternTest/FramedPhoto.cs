@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,7 @@ namespace myStudy.WinForms.DecoratorPatternTest
 {
     public class FramedPhoto: myPhoto
     {
+        
         myPhoto _photo;
 
         public FramedPhoto(myPhoto myPhoto)
@@ -18,7 +20,7 @@ namespace myStudy.WinForms.DecoratorPatternTest
 
         public  FramedPhoto()
         {
-
+            
         }
 
         public override void Draw(object sender, PaintEventArgs e)
