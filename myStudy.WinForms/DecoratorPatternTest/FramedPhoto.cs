@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace myStudy.WinForms.DecoratorPatternTest
-{
+{ 
     public class FramedPhoto: myPhoto
     {
         
